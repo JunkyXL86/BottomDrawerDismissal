@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App1.BottomDrawerPopup"
+             Color="Transparent"
+             Size="400,500"
+             VerticalOptions="End">
+    <Frame x:Name="Frame" CornerRadius="15" Margin="0" Padding="0">
+
+        <StackLayout>
+            <ContentView HeightRequest="30">
+                <ContentView.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                </ContentView.GestureRecognizers>
+
+                <BoxView HeightRequest="3"
+                         CornerRadius="2"
+                         Color="Gray"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"/>
+            </ContentView>
+
+            <StackLayout HorizontalOptions="Fill" Padding="10">
+                <Entry Placeholder="Enter Name" />
+                <Button Text="Send" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</views:Popup>
